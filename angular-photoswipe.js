@@ -26,7 +26,8 @@
           slides: '=',
           slideSelector: '@',
           template: '@',
-          onClose: '&'
+          onClose: '&',
+	  onAfterChange: '&'
         },
         link: linkFn
       };
@@ -77,6 +78,8 @@
           scope.gallery.listen('afterChange', function () {
             scope.safeApply(function () {
               scope.item = scope.gallery.currItem;
+	      if (scope.onAfterChange)
+	        scope.onAfterChange()(scope.item);
             });
           });
         };
