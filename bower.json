@@ -6,7 +6,7 @@
   ],
   "description": "An angular wrapper for PhotoSwipe",
   "main": [
-    "angular-photoswipe.min.js",
+    "angular-photoswipe.js",
     "views/ng-photoswipe.html"
   ],
   "dependencies": {
